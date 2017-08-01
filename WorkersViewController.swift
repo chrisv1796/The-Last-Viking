@@ -15,7 +15,6 @@ var numOfLumberMen = 1000
 var numOfBaker = 1000
 var numOfStoneMen = 1000
 var workersTableViewGlbl: UITableView!
-var workerLabelGlbl:UILabel!
 
 import UIKit
 //arays for the tableView
@@ -28,7 +27,6 @@ class WorkersViewController: UIViewController, UITableViewDelegate, UITableViewD
 @IBOutlet var trainWorkersTextField: UITextField!
 @IBOutlet var workerView: UIView!
 @IBOutlet var workerTableView: UITableView!
-@IBOutlet var workerLabel: UILabel!
 
 
     
@@ -57,7 +55,6 @@ class WorkersViewController: UIViewController, UITableViewDelegate, UITableViewD
         workerTextFieldGlbl = trainWorkersTextField
         workerViewGlbl = workerView
         workersTableViewGlbl = workerTableView
-        workerLabel = workerLabelGlbl
 
         // Do any additional setup after loading the view.
     }
@@ -69,16 +66,13 @@ class WorkersViewController: UIViewController, UITableViewDelegate, UITableViewD
     // You're not creating troops youre simply subtracting the populatioon so the only limit you have is the pop..
     //Buttons
     @IBAction func miners(_ sender: UIButton) {
-        workerLabel = workerLabelGlbl
         workerType = "miners"
         workerViewGlbl.isHidden = false
-        self.checkNil()
       //  workerLabel.text = "Train Miners"
         
     }
     @IBAction func lumberMen(_ sender: UIButton) {
-       
-        workerType = "lumberMen"
+       workerType = "lumberMen"
     }
     @IBAction func stoneMen(_ sender: UIButton) {
         workerType = "stoneMen"
@@ -90,7 +84,6 @@ class WorkersViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBAction func trainWorkerButton(_ sender: UIButton) {
         workerTextFieldGlbl = trainWorkersTextField
         workerTableView = workersTableViewGlbl
-        workerLabelGlbl = workerLabel
     
         if workerTextFieldGlbl.text != "" {
             self.numOfWorkers()
@@ -122,11 +115,6 @@ class WorkersViewController: UIViewController, UITableViewDelegate, UITableViewD
     //Hide Kyboard when touches outside beging 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
-    }
-    func checkNil() {
-        if workerLabelGlbl == nil {
-            print("label Is Nil")
-        }
     }
 }
 

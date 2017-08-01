@@ -12,6 +12,11 @@
 		AD8B922D1EFA1E8A00C16312 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD8B922B1EFA1E8A00C16312 /* Main.storyboard */; };
 		AD8B922F1EFA1E8A00C16312 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD8B922E1EFA1E8A00C16312 /* Assets.xcassets */; };
 		AD8B92321EFA1E8A00C16312 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD8B92301EFA1E8A00C16312 /* LaunchScreen.storyboard */; };
+		AD8B923A1EFA464000C16312 /* TroopsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8B92391EFA464000C16312 /* TroopsViewController.swift */; };
+		ADF33BFB1F22EF0200D6B889 /* TroopsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF33BFA1F22EF0100D6B889 /* TroopsTableViewCell.swift */; };
+		ADF33BFD1F266E5600D6B889 /* PopulationClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF33BFC1F266E5600D6B889 /* PopulationClassViewController.swift */; };
+		ADF33C011F26EA9E00D6B889 /* WorkersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF33C001F26EA9E00D6B889 /* WorkersViewController.swift */; };
+		ADF33C031F26EB7900D6B889 /* WorkerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF33C021F26EB7900D6B889 /* WorkerTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		AD8B922E1EFA1E8A00C16312 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD8B92311EFA1E8A00C16312 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD8B92331EFA1E8A00C16312 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD8B92391EFA464000C16312 /* TroopsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TroopsViewController.swift; sourceTree = "<group>"; };
+		ADF33BFA1F22EF0100D6B889 /* TroopsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TroopsTableViewCell.swift; sourceTree = "<group>"; };
+		ADF33BFC1F266E5600D6B889 /* PopulationClassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopulationClassViewController.swift; sourceTree = "<group>"; };
+		ADF33C001F26EA9E00D6B889 /* WorkersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorkersViewController.swift; path = ../WorkersViewController.swift; sourceTree = "<group>"; };
+		ADF33C021F26EB7900D6B889 /* WorkerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkerTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +65,12 @@
 			isa = PBXGroup;
 			children = (
 				AD8B92271EFA1E8A00C16312 /* AppDelegate.swift */,
+				ADF33BFC1F266E5600D6B889 /* PopulationClassViewController.swift */,
 				AD8B92291EFA1E8A00C16312 /* ViewController.swift */,
+				AD8B92391EFA464000C16312 /* TroopsViewController.swift */,
+				ADF33BFA1F22EF0100D6B889 /* TroopsTableViewCell.swift */,
+				ADF33C001F26EA9E00D6B889 /* WorkersViewController.swift */,
+				ADF33C021F26EB7900D6B889 /* WorkerTableViewCell.swift */,
 				AD8B922B1EFA1E8A00C16312 /* Main.storyboard */,
 				AD8B922E1EFA1E8A00C16312 /* Assets.xcassets */,
 				AD8B92301EFA1E8A00C16312 /* LaunchScreen.storyboard */,
@@ -137,8 +152,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD8B923A1EFA464000C16312 /* TroopsViewController.swift in Sources */,
 				AD8B922A1EFA1E8A00C16312 /* ViewController.swift in Sources */,
+				ADF33C031F26EB7900D6B889 /* WorkerTableViewCell.swift in Sources */,
+				ADF33BFB1F22EF0200D6B889 /* TroopsTableViewCell.swift in Sources */,
 				AD8B92281EFA1E8A00C16312 /* AppDelegate.swift in Sources */,
+				ADF33C011F26EA9E00D6B889 /* WorkersViewController.swift in Sources */,
+				ADF33BFD1F266E5600D6B889 /* PopulationClassViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +322,7 @@
 				AD8B92381EFA1E8A00C16312 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

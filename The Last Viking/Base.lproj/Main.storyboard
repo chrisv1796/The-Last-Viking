@@ -1,26 +1,521 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Troops View Controller-->
+        <scene sceneID="JzJ-z7-rFh">
+            <objects>
+                <viewController id="p1b-mu-DcB" customClass="TroopsViewController" customModule="The_Last_Viking" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1Ed-IL-oBK"/>
+                        <viewControllerLayoutGuide type="bottom" id="vHg-Kx-bvY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bB8-GO-iyI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Troops" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJE-OM-c1g">
+                                <rect key="frame" x="133" y="11" width="109" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="109" id="Gt6-UV-noA"/>
+                                    <constraint firstAttribute="height" constant="35" id="ZKW-Kz-Uzw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQ5-Ci-6pi">
+                                <rect key="frame" x="16" y="17" width="131" height="17"/>
+                                <state key="normal" title="Main Menu"/>
+                                <connections>
+                                    <action selector="mainMenu:" destination="p1b-mu-DcB" eventType="touchUpInside" id="YsI-4V-NeO"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="goBackToVillage" id="wQg-I5-5LK"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="47" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8xr-bf-oHd">
+                                <rect key="frame" x="16" y="45" width="343" height="196"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="196" id="r7c-3r-LmA"/>
+                                </constraints>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="troopCell" rowHeight="47" id="97L-wD-SbT" customClass="TroopsTableViewCell" customModule="The_Last_Viking" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="47"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="97L-wD-SbT" id="sm1-dA-Km3">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="47"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zus-Zi-6dS">
+                                                    <rect key="frame" x="23" y="13" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="05k-n0-v3M">
+                                                    <rect key="frame" x="278" y="12" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="05k-n0-v3M" firstAttribute="centerY" secondItem="sm1-dA-Km3" secondAttribute="centerY" id="A3d-hb-U8b"/>
+                                                <constraint firstItem="Zus-Zi-6dS" firstAttribute="centerY" secondItem="sm1-dA-Km3" secondAttribute="centerY" id="D4d-jc-eDO"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="05k-n0-v3M" secondAttribute="trailing" constant="15" id="dc3-JT-HFq"/>
+                                                <constraint firstItem="Zus-Zi-6dS" firstAttribute="leading" secondItem="sm1-dA-Km3" secondAttribute="leadingMargin" constant="15" id="mY4-KI-A03"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="troopCountLabel" destination="05k-n0-v3M" id="gUe-6z-x7j"/>
+                                            <outlet property="troopTypeLabel" destination="Zus-Zi-6dS" id="fSw-g3-ftm"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="p1b-mu-DcB" id="lmE-vf-Fm2"/>
+                                    <outlet property="delegate" destination="p1b-mu-DcB" id="END-uf-hbd"/>
+                                </connections>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="nSv-O6-95K">
+                                <rect key="frame" x="196" y="308.5" width="88" height="170"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lLe-fB-iNP" userLabel="LongArchers">
+                                        <rect key="frame" x="0.0" y="0.0" width="88" height="30"/>
+                                        <state key="normal" title="LongArchers"/>
+                                        <connections>
+                                            <action selector="trainLongArchers:" destination="p1b-mu-DcB" eventType="touchUpInside" id="mwS-Yi-m4v"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ad-qf-cnA" userLabel="Spies">
+                                        <rect key="frame" x="0.0" y="70" width="88" height="30"/>
+                                        <state key="normal" title="Spies"/>
+                                        <connections>
+                                            <action selector="trainSpies:" destination="p1b-mu-DcB" eventType="touchUpInside" id="5bB-pi-CTk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yze-SS-pIj" userLabel="Elephants">
+                                        <rect key="frame" x="0.0" y="140" width="88" height="30"/>
+                                        <state key="normal" title="Elephant"/>
+                                        <connections>
+                                            <action selector="trainElephans:" destination="p1b-mu-DcB" eventType="touchUpInside" id="E4O-BH-qkN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="yeD-Hi-C3e">
+                                <rect key="frame" x="91" y="308.5" width="56" height="170"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XL5-T2-e27" userLabel="Soldiers">
+                                        <rect key="frame" x="0.0" y="0.0" width="56" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="XL5-T2-e27" secondAttribute="height" multiplier="28:15" id="0Oe-TK-seb"/>
+                                        </constraints>
+                                        <state key="normal" title="Soldiers"/>
+                                        <connections>
+                                            <action selector="trainSoldiers:" destination="p1b-mu-DcB" eventType="touchUpInside" id="1Ov-vc-0ZD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="prK-7p-Tj9">
+                                        <rect key="frame" x="0.0" y="70" width="56" height="30"/>
+                                        <state key="normal" title="Archers"/>
+                                        <connections>
+                                            <action selector="trainArchers:" destination="p1b-mu-DcB" eventType="touchUpInside" id="F1t-Sf-17x"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2AD-9s-QxG" userLabel="Giants">
+                                        <rect key="frame" x="0.0" y="140" width="56" height="30"/>
+                                        <state key="normal" title="Giants"/>
+                                        <connections>
+                                            <action selector="trainGiants:" destination="p1b-mu-DcB" eventType="touchUpInside" id="4oG-z8-NRQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <containerView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nCR-RK-0Ay">
+                                <rect key="frame" x="16" y="287.5" width="343" height="200.5"/>
+                                <connections>
+                                    <segue destination="qlZ-ns-6yu" kind="embed" identifier="showArchersTrain" id="wJ6-2R-u0H"/>
+                                </connections>
+                            </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Train Troops" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6GX-eY-kEQ">
+                                <rect key="frame" x="140" y="257" width="95.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8xr-bf-oHd" firstAttribute="leading" secondItem="nCR-RK-0Ay" secondAttribute="leading" id="0gb-Ju-spH"/>
+                            <constraint firstItem="rJE-OM-c1g" firstAttribute="centerX" secondItem="8xr-bf-oHd" secondAttribute="centerX" id="2Ir-cP-3Eb"/>
+                            <constraint firstItem="yeD-Hi-C3e" firstAttribute="leading" secondItem="bB8-GO-iyI" secondAttribute="leadingMargin" constant="75" id="4cw-II-fdd"/>
+                            <constraint firstItem="8xr-bf-oHd" firstAttribute="leading" secondItem="bB8-GO-iyI" secondAttribute="leadingMargin" id="9Vo-LA-poa"/>
+                            <constraint firstItem="8xr-bf-oHd" firstAttribute="top" secondItem="1Ed-IL-oBK" secondAttribute="bottom" constant="25" id="EN8-qP-JSa"/>
+                            <constraint firstItem="aQ5-Ci-6pi" firstAttribute="leading" secondItem="bB8-GO-iyI" secondAttribute="leadingMargin" id="H0k-fB-Hf4"/>
+                            <constraint firstItem="nSv-O6-95K" firstAttribute="top" secondItem="yeD-Hi-C3e" secondAttribute="top" id="HEV-nN-ULS"/>
+                            <constraint firstItem="8xr-bf-oHd" firstAttribute="top" secondItem="aQ5-Ci-6pi" secondAttribute="bottom" constant="11" id="Lck-dM-f1L"/>
+                            <constraint firstItem="yeD-Hi-C3e" firstAttribute="trailing" secondItem="aQ5-Ci-6pi" secondAttribute="trailing" id="MIk-aG-gfm"/>
+                            <constraint firstItem="8xr-bf-oHd" firstAttribute="leading" secondItem="bB8-GO-iyI" secondAttribute="leadingMargin" id="OEH-po-1Rw"/>
+                            <constraint firstItem="6GX-eY-kEQ" firstAttribute="centerX" secondItem="bB8-GO-iyI" secondAttribute="centerX" id="QLF-24-vF7"/>
+                            <constraint firstItem="rJE-OM-c1g" firstAttribute="top" secondItem="1Ed-IL-oBK" secondAttribute="bottom" constant="-9" id="UvQ-Go-7RX"/>
+                            <constraint firstItem="yeD-Hi-C3e" firstAttribute="top" secondItem="6GX-eY-kEQ" secondAttribute="bottom" constant="31" id="YGs-md-yeA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nSv-O6-95K" secondAttribute="trailing" constant="75" id="cN7-q0-mii"/>
+                            <constraint firstItem="8xr-bf-oHd" firstAttribute="trailing" secondItem="nCR-RK-0Ay" secondAttribute="trailing" id="cac-eh-UbE"/>
+                            <constraint firstItem="vHg-Kx-bvY" firstAttribute="top" secondItem="nCR-RK-0Ay" secondAttribute="bottom" constant="179" id="kSH-GL-O9d"/>
+                            <constraint firstItem="nCR-RK-0Ay" firstAttribute="top" secondItem="6GX-eY-kEQ" secondAttribute="bottom" constant="10.5" id="m1t-8E-Llr"/>
+                            <constraint firstItem="8xr-bf-oHd" firstAttribute="top" secondItem="rJE-OM-c1g" secondAttribute="bottom" constant="-1" id="mbg-Zn-8jo"/>
+                            <constraint firstItem="8xr-bf-oHd" firstAttribute="trailing" secondItem="bB8-GO-iyI" secondAttribute="trailingMargin" id="mlc-R2-LOW"/>
+                            <constraint firstItem="aQ5-Ci-6pi" firstAttribute="top" secondItem="1Ed-IL-oBK" secondAttribute="bottom" constant="-3" id="nmo-z2-Abc"/>
+                            <constraint firstItem="8xr-bf-oHd" firstAttribute="trailing" secondItem="bB8-GO-iyI" secondAttribute="trailingMargin" id="oAC-CG-aZu"/>
+                            <constraint firstItem="6GX-eY-kEQ" firstAttribute="top" secondItem="8xr-bf-oHd" secondAttribute="bottom" constant="16" id="vSR-sD-yys"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mainMenu" destination="aQ5-Ci-6pi" id="m0q-rB-u1v"/>
+                        <outlet property="trainTroopsLabel" destination="6GX-eY-kEQ" id="vhi-dY-gHr"/>
+                        <outlet property="trainTroopsView" destination="nCR-RK-0Ay" id="Rxo-r6-IB1"/>
+                        <outlet property="troopsLocation" destination="rJE-OM-c1g" id="K2e-dv-CXL"/>
+                        <outlet property="troopsPageView" destination="bB8-GO-iyI" id="nOw-YL-7B2"/>
+                        <outlet property="troopsTableView" destination="8xr-bf-oHd" id="C5Z-he-PpH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0mN-9f-6IT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-12" y="-558"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="The_Last_Viking" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" tag="4" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="center" fixedFrame="YES" axis="vertical" distribution="fillProportionally" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="gxh-aw-FgG">
+                                <rect key="frame" x="76" y="103" width="57" height="170"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJ2-T3-nuU">
+                                        <rect key="frame" x="4.5" y="0.0" width="48" height="30"/>
+                                        <state key="normal" title="Troops"/>
+                                        <connections>
+                                            <action selector="troopsView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xx5-RQ-cL7"/>
+                                            <segue destination="p1b-mu-DcB" kind="show" identifier="troops" id="Rd1-VV-Aek"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" placeholderIntrinsicWidth="45" placeholderIntrinsicHeight="30" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDP-AR-INp">
+                                        <rect key="frame" x="4.5" y="70" width="48" height="30"/>
+                                        <state key="normal" title="Town Hall"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="akR-CB-p0d">
+                                        <rect key="frame" x="0.0" y="140" width="57" height="30"/>
+                                        <state key="normal" title="Workers"/>
+                                        <connections>
+                                            <action selector="workersButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zap-53-ZZL"/>
+                                            <segue destination="0mf-Mm-Ay8" kind="show" identifier="workersPage" id="skz-QP-RcP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="vJ2-T3-nuU" firstAttribute="leading" secondItem="zDP-AR-INp" secondAttribute="leading" id="NqG-yR-Whb"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Village" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Stw-wW-1a8">
+                                <rect key="frame" x="116" y="30" width="143" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sqf-V8-Beb">
+                                <rect key="frame" x="162.5" y="318.5" width="50" height="30"/>
+                                <state key="normal" title="Credits"/>
+                            </button>
+                            <stackView opaque="NO" contentMode="center" fixedFrame="YES" axis="vertical" distribution="fillProportionally" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="n8m-pf-vcn">
+                                <rect key="frame" x="266" y="103" width="59" height="170"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpd-Of-oNe">
+                                        <rect key="frame" x="3.5" y="0.0" width="52" height="30"/>
+                                        <state key="normal" title="Explore"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHY-be-33I">
+                                        <rect key="frame" x="0.0" y="70" width="59" height="30"/>
+                                        <state key="normal" title="Supplies"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVQ-IS-WIW">
+                                        <rect key="frame" x="1" y="140" width="57" height="30"/>
+                                        <state key="normal" title="Workers"/>
+                                        <connections>
+                                            <action selector="workersButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Xa-yx-nMk"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Stw-wW-1a8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="100" id="1yU-fH-IeI"/>
+                            <constraint firstItem="sqf-V8-Beb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="5tS-lL-36z"/>
+                            <constraint firstItem="Stw-wW-1a8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="Oan-6t-k8U"/>
+                            <constraint firstItem="sqf-V8-Beb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rh2-d5-JPd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Stw-wW-1a8" secondAttribute="trailing" constant="100" id="yhF-Z6-opJ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="location" destination="Stw-wW-1a8" id="ubC-dK-xJ7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-12" y="71"/>
+        </scene>
+        <!--Workers View Controller-->
+        <scene sceneID="CUd-i4-6SG">
+            <objects>
+                <viewController id="0mf-Mm-Ay8" customClass="WorkersViewController" customModule="The_Last_Viking" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="b4Z-yA-LtV"/>
+                        <viewControllerLayoutGuide type="bottom" id="Cn4-Ql-23W"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7Am-zN-jvh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="2dm-WZ-YQu">
+                                <rect key="frame" x="83" y="302" width="87" height="170"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCA-J8-FvC">
+                                        <rect key="frame" x="0.0" y="0.0" width="87" height="30"/>
+                                        <state key="normal" title="Miners"/>
+                                        <connections>
+                                            <action selector="miners:" destination="0mf-Mm-Ay8" eventType="touchUpInside" id="elP-Ai-3aw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yyb-e1-ybC">
+                                        <rect key="frame" x="0.0" y="70" width="87" height="30"/>
+                                        <state key="normal" title="Lumber Men"/>
+                                        <connections>
+                                            <action selector="lumberMen:" destination="0mf-Mm-Ay8" eventType="touchUpInside" id="E6X-K8-0za"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jXu-CU-OoY">
+                                        <rect key="frame" x="0.0" y="140" width="87" height="30"/>
+                                        <state key="normal" title="Stone Men"/>
+                                        <connections>
+                                            <action selector="stoneMen:" destination="0mf-Mm-Ay8" eventType="touchUpInside" id="5Nx-Gi-nfg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FY9-at-IkT" customClass="Workers">
+                                <rect key="frame" x="16" y="43" width="343" height="201"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="workersCell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="workersCell" id="DTv-3j-ZSi" customClass="WorkerTableViewCell" customModule="The_Last_Viking" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DTv-3j-ZSi" id="e3A-aa-wYi">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cm1-rb-KRu">
+                                                    <rect key="frame" x="8" y="8" width="112" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNx-Kt-0cB">
+                                                    <rect key="frame" x="270" y="11" width="65" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="numOfWorkers" destination="HNx-Kt-0cB" id="dtB-7c-fXd"/>
+                                            <outlet property="typeOfWorker" destination="cm1-rb-KRu" id="ErF-cP-cY4"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="0mf-Mm-Ay8" id="DRa-5Z-MAZ"/>
+                                    <outlet property="delegate" destination="0mf-Mm-Ay8" id="yNr-Sq-JVS"/>
+                                </connections>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="bnw-So-gUM">
+                                <rect key="frame" x="233" y="302" width="46" height="170"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0CI-Xs-sbZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                        <state key="normal" title="Baker"/>
+                                        <connections>
+                                            <action selector="baker:" destination="0mf-Mm-Ay8" eventType="touchUpInside" id="S35-Xx-oO2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJU-JU-9fU">
+                                        <rect key="frame" x="0.0" y="70" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efX-2b-lZV">
+                                        <rect key="frame" x="0.0" y="140" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <containerView hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JCL-Z1-3DK">
+                                <rect key="frame" x="16" y="309" width="343" height="182"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="QAR-aO-RQw" kind="embed" identifier="showWorkersView" id="4rq-AK-N6b"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="workerTableView" destination="FY9-at-IkT" id="JBA-Zv-HeH"/>
+                        <outlet property="workerView" destination="JCL-Z1-3DK" id="qw5-Ce-aVi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FQO-Xj-BE4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="669.60000000000002" y="75.112443778110944"/>
+        </scene>
+        <!--Troops View Controller-->
+        <scene sceneID="bLB-w0-4N4">
+            <objects>
+                <viewController id="qlZ-ns-6yu" customClass="TroopsViewController" customModule="The_Last_Viking" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="M2Q-pw-fLB"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zn6-sq-MPh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="skF-vU-nqN">
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="200.5"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How Many Do You Want To Train?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LF5-o7-77V">
+                                <rect key="frame" x="56" y="9.5" width="230" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="How Many?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tSo-Ez-jS0">
+                                <rect key="frame" x="123.5" y="85" width="95.5" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="SFx-pe-0Vl">
+                                <rect key="frame" x="125.5" y="143" width="91" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btT-O3-Vvl">
+                                        <rect key="frame" x="0.0" y="0.0" width="34" height="30"/>
+                                        <state key="normal" title="Train"/>
+                                        <connections>
+                                            <action selector="trainTroops:" destination="qlZ-ns-6yu" eventType="touchUpInside" id="kzp-KD-Dek"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hwi-a5-aJS">
+                                        <rect key="frame" x="54" y="0.0" width="37" height="30"/>
+                                        <state key="normal" title="Done"/>
+                                        <connections>
+                                            <action selector="doneButton:" destination="qlZ-ns-6yu" eventType="touchUpInside" id="5Jw-tT-C7z"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tSo-Ez-jS0" firstAttribute="top" secondItem="LF5-o7-77V" secondAttribute="bottom" constant="57" id="QYN-I9-4ij"/>
+                            <constraint firstItem="LF5-o7-77V" firstAttribute="centerX" secondItem="skF-vU-nqN" secondAttribute="centerX" id="WLW-5L-AQ3"/>
+                            <constraint firstItem="tSo-Ez-jS0" firstAttribute="centerX" secondItem="skF-vU-nqN" secondAttribute="centerX" id="aQ4-vF-2S0"/>
+                            <constraint firstItem="SFx-pe-0Vl" firstAttribute="top" secondItem="tSo-Ez-jS0" secondAttribute="bottom" constant="28" id="fWm-u8-c9c"/>
+                            <constraint firstItem="tSo-Ez-jS0" firstAttribute="centerY" secondItem="skF-vU-nqN" secondAttribute="centerY" id="mgV-Vc-Otn"/>
+                            <constraint firstItem="SFx-pe-0Vl" firstAttribute="centerX" secondItem="skF-vU-nqN" secondAttribute="centerX" id="roH-wd-x5u"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="doneButton" destination="Hwi-a5-aJS" id="Kwb-3B-k6f"/>
+                        <outlet property="troopTextField" destination="tSo-Ez-jS0" id="wf6-at-AUc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="boN-sV-cgI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-673" y="-492"/>
+        </scene>
+        <!--Workers View Controller-->
+        <scene sceneID="dRn-g9-Uzp">
+            <objects>
+                <viewController id="QAR-aO-RQw" customClass="WorkersViewController" customModule="The_Last_Viking" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xSu-K1-Zk8"/>
+                        <viewControllerLayoutGuide type="bottom" id="o0Z-JS-wya"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rIz-Wg-f2a">
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="182"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2UE-gn-Kpw">
+                                <rect key="frame" x="150" y="0.0" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mXa-0z-Na9">
+                                <rect key="frame" x="123" y="57" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="continue"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Upg-C9-J7Z">
+                                <rect key="frame" x="80" y="95" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Train"/>
+                                <connections>
+                                    <action selector="trainWorkerButton:" destination="QAR-aO-RQw" eventType="touchUpInside" id="9CE-lQ-QNf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="23T-4M-aP5">
+                                <rect key="frame" x="217" y="95" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Done"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="trainWorkersTextField" destination="mXa-0z-Na9" id="qp8-TC-WcY"/>
+                        <outlet property="workerLabel" destination="2UE-gn-Kpw" id="gCK-9C-xT7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fd1-ST-UnK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1322" y="-13"/>
         </scene>
     </scenes>
 </document>
